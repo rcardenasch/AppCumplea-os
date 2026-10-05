@@ -9,35 +9,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const fotos = [
 
         {
-            archivo: "images/foto1.jpg",
+            archivo: "images/foto1.JPG",
             titulo: "Los primeros recuerdos",
             descripcion:
                 "El comienzo de una historia maravillosa."
         },
 
         {
-            archivo: "images/foto2.jpg",
+            archivo: "images/foto2.JPG",
             titulo: "La familia",
             descripcion:
                 "Los momentos que realmente importan."
         },
 
         {
-            archivo: "images/foto3.jpg",
+            archivo: "images/foto3.JPG",
             titulo: "Momentos inolvidables",
             descripcion:
                 "Recuerdos que permanecen para siempre."
         },
 
         {
-            archivo: "images/foto4.jpg",
+            archivo: "images/foto4.JPG",
             titulo: "Una vida extraordinaria",
             descripcion:
                 "70 años dejando huellas en nuestros corazones."
         },
 
         {
-            archivo: "images/foto5.jpg",
+            archivo: "images/foto5.JPG",
             titulo: "La historia continúa",
             descripcion:
                 "Porque todavía quedan muchos momentos por vivir."
