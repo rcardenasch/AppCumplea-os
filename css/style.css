@@ -1,0 +1,1178 @@
+
+:root {
+
+    --gold: #c6a15b;
+
+    --gold-light: #e5c98b;
+
+    --dark: #171412;
+
+    --cream: #f8f4ed;
+
+    --text: #3b3530;
+
+    --white: #ffffff;
+
+}
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    background:
+        var(--cream);
+
+    color:
+        var(--text);
+
+    overflow-x: hidden;
+
+}
+
+
+section {
+
+    position: relative;
+
+}
+
+
+.container {
+
+    width:
+        min(1100px, 90%);
+
+    margin:
+        auto;
+
+}
+
+
+.section {
+
+    padding:
+        110px 0;
+
+}
+
+
+.section-number {
+
+    display:
+        block;
+
+    color:
+        var(--gold);
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        4px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.section-title {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(48px, 7vw, 80px);
+
+    font-weight:
+        400;
+
+    color:
+        var(--dark);
+
+}
+
+
+.section-subtitle {
+
+    margin-top:
+        15px;
+
+    color:
+        #777;
+
+}
+
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height:
+        100vh;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    color:
+        white;
+
+}
+
+
+.hero-slideshow {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        0;
+
+}
+
+
+.hero-slide {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background-position:
+        center;
+
+    background-size:
+        cover;
+
+    opacity:
+        0;
+
+    transform:
+        scale(1.08);
+
+    transition:
+        opacity 1.5s ease,
+        transform 6s ease;
+
+}
+
+
+.hero-slide.active {
+
+    opacity:
+        1;
+
+    transform:
+        scale(1);
+
+}
+
+
+.hero-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    z-index:
+        1;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.58),
+            rgba(0,0,0,.60)
+        );
+
+}
+
+
+.hero-content {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+    width:
+        90%;
+
+}
+
+
+.small-title {
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        5px;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.hero h1 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(120px, 20vw, 230px);
+
+    line-height:
+        .8;
+
+    font-weight:
+        400;
+
+}
+
+
+.hero h2 {
+
+    font-size:
+        clamp(24px, 4vw, 42px);
+
+    font-weight:
+        300;
+
+    margin-top:
+        20px;
+
+}
+
+
+.hero-name {
+
+    margin-top:
+        30px;
+
+    font-size:
+        15px;
+
+    letter-spacing:
+        2px;
+
+}
+
+
+.main-button {
+
+    margin-top:
+        45px;
+
+    padding:
+        16px 32px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.7);
+
+    border-radius:
+        40px;
+
+    background:
+        rgba(255,255,255,.08);
+
+    color:
+        white;
+
+    font-family:
+        inherit;
+
+    cursor:
+        pointer;
+
+    transition:
+        .3s;
+
+}
+
+
+.main-button:hover {
+
+    background:
+        white;
+
+    color:
+        var(--dark);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.slide-counter {
+
+    position:
+        absolute;
+
+    right:
+        30px;
+
+    bottom:
+        30px;
+
+    z-index:
+        4;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        3px;
+
+}
+
+
+.scroll-indicator {
+
+    position:
+        absolute;
+
+    bottom:
+        30px;
+
+    left:
+        50%;
+
+    z-index:
+        4;
+
+    font-size:
+        25px;
+
+    animation:
+        bounce 2s infinite;
+
+}
+
+
+@keyframes bounce {
+
+    0%,100% {
+
+        transform:
+            translate(-50%,0);
+
+    }
+
+    50% {
+
+        transform:
+            translate(-50%,10px);
+
+    }
+
+}
+
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro {
+
+    background:
+        var(--cream);
+
+    text-align:
+        center;
+
+}
+
+
+.intro h2 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        75px;
+
+    font-weight:
+        400;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.intro p {
+
+    max-width:
+        700px;
+
+    margin:
+        20px auto;
+
+    line-height:
+        1.9;
+
+}
+
+
+.large-text {
+
+    font-size:
+        24px;
+
+}
+
+
+.highlight {
+
+    margin-top:
+        40px;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        45px;
+
+    color:
+        var(--gold);
+
+}
+
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.memories-section {
+
+    background:
+        white;
+
+}
+
+
+.memory-gallery {
+
+    position:
+        relative;
+
+    max-width:
+        900px;
+
+    height:
+        550px;
+
+    margin:
+        70px auto 30px;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        5px;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.18);
+
+}
+
+
+.memory-slide {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    opacity:
+        0;
+
+    transition:
+        opacity 1s ease;
+
+}
+
+
+.memory-slide.active {
+
+    opacity:
+        1;
+
+}
+
+
+.memory-slide img {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+}
+
+
+.memory-caption {
+
+    position:
+        absolute;
+
+    left:
+        0;
+
+    right:
+        0;
+
+    bottom:
+        0;
+
+    padding:
+        50px 30px 30px;
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.75)
+        );
+
+}
+
+
+.memory-caption h3 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        42px;
+
+    font-weight:
+        400;
+
+}
+
+
+.memory-caption p {
+
+    margin-top:
+        8px;
+
+    font-size:
+        13px;
+
+    opacity:
+        .9;
+
+}
+
+
+.gallery-controls {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
+}
+
+
+.gallery-button {
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border:
+        1px solid
+        var(--gold);
+
+    border-radius:
+        50%;
+
+    background:
+        white;
+
+    color:
+        var(--gold);
+
+    cursor:
+        pointer;
+
+    font-size:
+        18px;
+
+    transition:
+        .3s;
+
+}
+
+
+.gallery-button:hover {
+
+    background:
+        var(--gold);
+
+    color:
+        white;
+
+}
+
+
+
+/* =====================================================
+   VIDEO
+===================================================== */
+
+.video-section {
+
+    background:
+        var(--dark);
+
+    color:
+        white;
+
+    text-align:
+        center;
+
+}
+
+
+.video-section .section-title {
+
+    color:
+        white;
+
+}
+
+
+.video-wrapper {
+
+    max-width:
+        850px;
+
+    margin:
+        60px auto 0;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.4);
+
+}
+
+
+.video-wrapper video {
+
+    width:
+        100%;
+
+    display:
+        block;
+
+}
+
+
+
+/* =====================================================
+   CARTA
+===================================================== */
+
+.letter-section {
+
+    background:
+        #eee8dc;
+
+}
+
+
+.letter {
+
+    max-width:
+        750px;
+
+    margin:
+        auto;
+
+    padding:
+        70px;
+
+    background:
+        white;
+
+    box-shadow:
+        0 30px 80px
+        rgba(0,0,0,.08);
+
+    text-align:
+        center;
+
+}
+
+
+.letter h2 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        70px;
+
+    font-weight:
+        400;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+.letter p {
+
+    line-height:
+        2;
+
+    margin:
+        20px 0;
+
+}
+
+
+.quote {
+
+    margin:
+        40px 0;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        50px;
+
+    color:
+        var(--gold);
+
+}
+
+
+.signature {
+
+    margin-top:
+        40px;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        40px;
+
+}
+
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final-section {
+
+    min-height:
+        100vh;
+
+    background:
+        #222;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    color:
+        white;
+
+}
+
+
+.final-section::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        url("../images/foto5.jpg")
+        center/cover;
+
+    opacity:
+        .45;
+
+}
+
+
+.final-section::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        rgba(0,0,0,.55);
+
+}
+
+
+.final-content {
+
+    position:
+        relative;
+
+    z-index:
+        3;
+
+}
+
+
+.final-content h2 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(120px, 20vw, 230px);
+
+    font-weight:
+        400;
+
+    line-height:
+        1;
+
+}
+
+
+.final-content h3 {
+
+    font-size:
+        clamp(22px,4vw,40px);
+
+    font-weight:
+        300;
+
+}
+
+
+.heart {
+
+    font-size:
+        55px;
+
+    margin:
+        30px 0;
+
+}
+
+
+.final-message {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        55px;
+
+}
+
+
+.small-final {
+
+    margin-top:
+        15px;
+
+    opacity:
+        .8;
+
+}
+
+
+
+/* =====================================================
+   MÚSICA
+===================================================== */
+
+.music-button {
+
+    position:
+        fixed;
+
+    right:
+        25px;
+
+    bottom:
+        25px;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border-radius:
+        50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.5);
+
+    background:
+        rgba(0,0,0,.7);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    z-index:
+        1000;
+
+    font-size:
+        20px;
+
+}
+
+
+
+/* =====================================================
+   CONFETI
+===================================================== */
+
+#confetti {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
+    z-index:
+        999;
+
+    display:
+        none;
+
+}
+
+
+
+/* =====================================================
+   ANIMACIONES
+===================================================== */
+
+.reveal {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+
+}
+
+
+.reveal.visible {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .section {
+
+        padding:
+            80px 0;
+
+    }
+
+
+    .hero h1 {
+
+        font-size:
+            120px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size:
+            26px;
+
+    }
+
+
+    .small-title {
+
+        letter-spacing:
+            3px;
+
+    }
+
+
+    .memory-gallery {
+
+        height:
+            430px;
+
+    }
+
+
+    .memory-caption h3 {
+
+        font-size:
+            35px;
+
+    }
+
+
+    .letter {
+
+        padding:
+            40px 25px;
+
+    }
+
+
+    .letter h2 {
+
+        font-size:
+            55px;
+
+    }
+
+
+    .quote {
+
+        font-size:
+            40px;
+
+    }
+
+
+    .final-message {
+
+        font-size:
+            42px;
+
+    }
+
+}
+
