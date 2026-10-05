@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Porque todavía quedan muchos momentos por vivir."
         },
         {
-            archivo: "images/foto6.JPG",
+            archivo: "images/foto6.jpg",
             titulo: "Eres Única mamita",
             descripcion:
                 "Por ser un ejemplo de madre."
