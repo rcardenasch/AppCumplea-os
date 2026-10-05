@@ -41,6 +41,12 @@ document.addEventListener("DOMContentLoaded", () => {
             titulo: "La historia continúa",
             descripcion:
                 "Porque todavía quedan muchos momentos por vivir."
+        },
+        {
+            archivo: "images/foto6.JPG",
+            titulo: "Eres Única mamita",
+            descripcion:
+                "Por ser un ejemplo de madre."
         }
 
     ];
@@ -631,10 +637,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             "#ffffff",
                             "#d6b56b"
                         ][
-                            Math.floor(
-                                Math.random()
-                                * 4
-                            )
+                        Math.floor(
+                            Math.random()
+                            * 4
+                        )
                         ];
 
 
