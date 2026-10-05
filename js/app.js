@@ -47,6 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
             titulo: "Eres Única mamita",
             descripcion:
                 "Por ser un ejemplo de madre."
+        },
+        {
+            archivo: "images/foto7.JPG",
+            titulo: "Compadres presentes",
+            descripcion:
+                "Por ser un día especial para todos."
         }
 
     ];
@@ -113,17 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const music =
         document.getElementById(
             "backgroundMusic"
-        );
-
-    const musicButton2 =
-        document.getElementById(
-            "musicButton"
-        );
-
-
-    const music2 =
-        document.getElementById(
-            "backgroundMusic2"
         );
 
 
@@ -711,6 +706,274 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     );
+
+
+    /* =====================================================
+    AUDIO DE HIJOS Y NIETOS
+    ===================================================== */
+
+    const familyAudio =
+        document.getElementById(
+            "familyAudio"
+        );
+
+
+    const familyAudioButton =
+        document.getElementById(
+            "familyAudioButton"
+        );
+
+
+    const familyAudioIcon =
+        document.getElementById(
+            "familyAudioIcon"
+        );
+
+
+    const familyAudioText =
+        document.getElementById(
+            "familyAudioText"
+        );
+
+
+    const audioProgress =
+        document.getElementById(
+            "audioProgress"
+        );
+
+
+    const audioCurrentTime =
+        document.getElementById(
+            "audioCurrentTime"
+        );
+
+
+    const audioDuration =
+        document.getElementById(
+            "audioDuration"
+        );
+
+
+    /* =====================================================
+    FORMATO DE TIEMPO
+    ===================================================== */
+
+    function formatoTiempo(segundos) {
+
+        if (
+            !Number.isFinite(segundos)
+        ) {
+
+            return "0:00";
+
+        }
+
+
+        const minutos =
+            Math.floor(
+                segundos / 60
+            );
+
+
+        const segundosRestantes =
+            Math.floor(
+                segundos % 60
+            );
+
+
+        return (
+            minutos +
+            ":" +
+            String(
+                segundosRestantes
+            ).padStart(2, "0")
+        );
+
+    }
+
+
+    /* =====================================================
+    BOTÓN REPRODUCIR / PAUSAR
+    ===================================================== */
+
+    familyAudioButton.addEventListener(
+        "click",
+        () => {
+
+            if (
+                familyAudio.paused
+            ) {
+
+                familyAudio.play()
+                    .then(() => {
+
+                        familyAudioIcon.textContent =
+                            "❚❚";
+
+                        familyAudioText.textContent =
+                            "Pausar mensaje";
+
+                        familyAudioButton.classList.add(
+                            "playing"
+                        );
+
+                    })
+                    .catch(error => {
+
+                        console.error(
+                            "No se pudo reproducir el audio:",
+                            error
+                        );
+
+                    });
+
+            } else {
+
+                familyAudio.pause();
+
+                familyAudioIcon.textContent =
+                    "▶";
+
+                familyAudioText.textContent =
+                    "Continuar mensaje";
+
+                familyAudioButton.classList.remove(
+                    "playing"
+                );
+
+            }
+
+        }
+);
+
+
+/* =====================================================
+   CUANDO CARGA EL AUDIO
+===================================================== */
+
+familyAudio.addEventListener(
+    "loadedmetadata",
+    () => {
+
+        audioDuration.textContent =
+            formatoTiempo(
+                familyAudio.duration
+            );
+
+    }
+);
+
+
+/* =====================================================
+   ACTUALIZAR PROGRESO
+===================================================== */
+
+familyAudio.addEventListener(
+    "timeupdate",
+    () => {
+
+        if (
+            !familyAudio.duration
+        ) {
+
+            return;
+
+        }
+
+
+        const porcentaje =
+            (
+                familyAudio.currentTime /
+                familyAudio.duration
+            ) * 100;
+
+
+        audioProgress.style.width =
+            porcentaje + "%";
+
+
+        audioCurrentTime.textContent =
+            formatoTiempo(
+                familyAudio.currentTime
+            );
+
+    }
+);
+
+
+/* =====================================================
+   CLICK EN LA BARRA
+===================================================== */
+
+const progressContainer =
+    document.querySelector(
+        ".audio-progress-container"
+    );
+
+
+progressContainer.addEventListener(
+    "click",
+    (event) => {
+
+        if (
+            !familyAudio.duration
+        ) {
+
+            return;
+
+        }
+
+
+        const rect =
+            progressContainer.getBoundingClientRect();
+
+
+        const posicion =
+            event.clientX -
+            rect.left;
+
+
+        const porcentaje =
+            posicion /
+            rect.width;
+
+
+        familyAudio.currentTime =
+            porcentaje *
+            familyAudio.duration;
+
+    }
+);
+
+
+/* =====================================================
+   AUDIO TERMINADO
+===================================================== */
+
+familyAudio.addEventListener(
+    "ended",
+    () => {
+
+        familyAudioIcon.textContent =
+            "▶";
+
+        familyAudioText.textContent =
+            "Escuchar nuevamente";
+
+        familyAudioButton.classList.remove(
+            "playing"
+        );
+
+        audioProgress.style.width =
+            "0%";
+
+        audioCurrentTime.textContent =
+            "0:00";
+
+    }
+);
+
+
 
 
 });
