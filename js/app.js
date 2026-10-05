@@ -61,6 +61,13 @@ document.addEventListener("DOMContentLoaded", () => {
             descripcion:
                 "Por alegrar nuestro día."
         }
+        ,
+        {
+            archivo: "images/foto9.JPG",
+            titulo: "Mi viejita linda",
+            descripcion:
+                "icono de la cancion cangallina."
+        }
 
     ];
 
