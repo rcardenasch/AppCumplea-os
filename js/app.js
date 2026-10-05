@@ -54,6 +54,13 @@ document.addEventListener("DOMContentLoaded", () => {
             descripcion:
                 "Por ser un día especial para todos."
         }
+        ,
+        {
+            archivo: "images/foto8.JPG",
+            titulo: "La cantante de la familia",
+            descripcion:
+                "Por alegrar nuestro día."
+        }
 
     ];
 
