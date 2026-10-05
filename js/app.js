@@ -115,6 +115,17 @@ document.addEventListener("DOMContentLoaded", () => {
             "backgroundMusic"
         );
 
+    const musicButton2 =
+        document.getElementById(
+            "musicButton"
+        );
+
+
+    const music2 =
+        document.getElementById(
+            "backgroundMusic2"
+        );
+
 
     const confetti =
         document.getElementById(
