@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
         ,
         {
             archivo: "images/foto8.JPG",
-            titulo: "La cantante de la familia",
+            titulo: "La cantante de la familia, Mi madre",
             descripcion:
-                "Por alegrar nuestro día."
+                "Gracias por alegrar nuestro día."
         }
         ,
         {
