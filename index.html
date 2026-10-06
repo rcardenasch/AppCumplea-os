@@ -4,526 +4,341 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>
         Victoria Chauca Vda. de Cárdenas | 70 años
     </title>
     <link rel="icon" type="image/png" href="images/Mama_icono_f.png">
 
-    <meta
-        name="description"
-        content="Celebramos los 70 años de Victoria Chauca Vda. de Cárdenas."
-    >
+    <meta name="description" content="Celebramos los 70 años de Victoria Chauca Vda. de Cárdenas.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet"
-    >
+        rel="stylesheet">
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
-    
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
+    <!-- =====================================================
      PORTADA / TIMELAPSE
 ===================================================== -->
 
-<section id="inicio" class="hero">
+    <section id="inicio" class="hero">
+        <!-- Fotos del timelapse -->
+        <div id="hero-slideshow" class="hero-slideshow"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="small-title">
+                UNA VIDA QUE MERECE SER CELEBRADA
+            </p>
+            <h1>
+                70
+            </h1>
+            <h2>
+                años de amor y recuerdos
+            </h2>
+            <p class="hero-name">
+                Victoria Chauca Vda. de Cárdenas
+            </p>
+            <button id="startButton" class="main-button">
+                ✨ Abrir mi sorpresa
+            </button>
+        </div>
+        <div class="slide-counter">
+            <span id="currentSlide">
+                1
+            </span>
+            /
+            <span id="totalSlides">
+                5
+            </span>
+        </div>
+        <div class="scroll-indicator">
+            ↓
+        </div>
+    </section>
 
-    <!-- Fotos del timelapse -->
-    <div
-        id="hero-slideshow"
-        class="hero-slideshow"
-    ></div>
-
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="hero-content">
-
-        <p class="small-title">
-            UNA VIDA QUE MERECE SER CELEBRADA
-        </p>
-
-
-        <h1>
-            70
-        </h1>
-
-
-        <h2>
-            años de amor y recuerdos
-        </h2>
-
-
-        <p class="hero-name">
-            Victoria Chauca Vda. de Cárdenas
-        </p>
-
-
-        <button
-            id="startButton"
-            class="main-button"
-        >
-            ✨ Abrir mi sorpresa
-        </button>
-
-    </div>
-
-
-    <div class="slide-counter">
-
-        <span id="currentSlide">
-            1
-        </span>
-
-        /
-        
-        <span id="totalSlides">
-            5
-        </span>
-
-    </div>
-
-
-    <div class="scroll-indicator">
-        ↓
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
+    <!-- =====================================================
      INTRODUCCIÓN
 ===================================================== -->
-
-<section class="intro section">
-
-    <div class="container reveal">
-
-        <span class="section-number">
-            01
-        </span>
-
-
-        <h2>
-            Querida Mamá Victoria...
-        </h2>
-
-
-        <p class="large-text">
-            Este 08 de octubre no solamente celebramos tu cumpleaños.
-        </p>
-
-
-        <p>
-            Celebramos 70 años de una vida llena de
-            historias, aprendizajes, alegrías, dificultades,
-            abrazos y, sobre todo, muchísimo amor.
-        </p>
-
-
-        <p>
-            Cada fotografía guarda un pequeño pedacito
-            de todo aquello que has vivido.
-        </p>
-
-
-        <div class="highlight">
-            Gracias por ser parte de nuestras vidas.
+    <section class="intro section">
+        <div class="container reveal">
+            <span class="section-number">
+                01
+            </span>
+            <h2>
+                Querida Mamá Victoria...
+            </h2>
+            <p class="large-text">
+                Este 08 de octubre no solamente celebramos tu cumpleaños.
+            </p>
+            <p>
+                Celebramos 70 años de una vida llena de
+                historias, aprendizajes, alegrías, dificultades,
+                abrazos y, sobre todo, muchísimo amor.
+            </p>
+            <p>
+                Cada fotografía guarda un pequeño pedacito
+                de todo aquello que has vivido.
+            </p>
+            <div class="highlight">
+                Gracias por ser parte de nuestras vidas.
+            </div>
         </div>
+    </section>
 
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
+    <!-- =====================================================
      GALERÍA TIMELAPSE
 ===================================================== -->
+    <section class="memories-section section">
+        <div class="container">
+            <span class="section-number">
+                02
+            </span>
+            <h2 class="section-title">
+                70 años de recuerdos
+            </h2>
+            <p class="section-subtitle">
+                Algunas fotografías, miles de historias.
+            </p>
+            <!-- Galería generada automáticamente -->
+            <div id="memory-gallery" class="memory-gallery"></div>
+            <!-- Controles -->
+            <div class="gallery-controls">
+                <button id="previousButton" class="gallery-button">
+                    ←
+                </button>
 
-<section class="memories-section section">
-
-    <div class="container">
-
-        <span class="section-number">
-            02
-        </span>
-
-
-        <h2 class="section-title">
-            70 años de recuerdos
-        </h2>
-
-
-        <p class="section-subtitle">
-            Algunas fotografías, miles de historias.
-        </p>
-
-
-        <!-- Galería generada automáticamente -->
-        <div
-            id="memory-gallery"
-            class="memory-gallery"
-        ></div>
-
-
-        <!-- Controles -->
-        <div class="gallery-controls">
-
-            <button
-                id="previousButton"
-                class="gallery-button"
-            >
-                ←
-            </button>
-
-
-            <button
-                id="pauseButton"
-                class="gallery-button"
-            >
-                ❚❚
-            </button>
-
-
-            <button
-                id="nextButton"
-                class="gallery-button"
-            >
-                →
-            </button>
-
+                <button id="pauseButton" class="gallery-button">
+                    ❚❚
+                </button>
+                <button id="nextButton" class="gallery-button">
+                    →
+                </button>
+            </div>
         </div>
+    </section>
 
-    </div>
+    <!-- ===================================================== VIDEO ===================================================== -->
+    <section class="video-section section">
+        <div class="container reveal">
+            <span class="section-number"> 03 </span>
+            <h2 class="section-title"> Una sorpresa para ti </h2>
+            <p class="section-subtitle"> Porque algunos recuerdos se cuentan mejor con imágenes. </p>
 
-</section>
+            <div class="video-wrapper">
+                <!-- Eliminamos el código incorrecto del source -->
+                <video id="birthdayVideo" controls preload="metadata">
+                    <source src="video/sorpresa.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir este video.
+                </video>
+            </div>
+        </div>
+    </section>
 
-
-
-<!-- ===================================================== VIDEO ===================================================== -->
-<section class="video-section section">
-  <div class="container reveal">
-    <span class="section-number"> 03 </span>
-    <h2 class="section-title"> Una sorpresa para ti </h2>
-    <p class="section-subtitle"> Porque algunos recuerdos se cuentan mejor con imágenes. </p>
-    
-    <div class="video-wrapper">
-      <!-- Eliminamos el código incorrecto del source -->
-      <video id="birthdayVideo" controls preload="metadata">
-        <source src="video/sorpresa.mp4" type="video/mp4">
-        Tu navegador no puede reproducir este video.
-      </video>
-    </div>
-  </div>
-</section>
-
-<!-- Script para regular el volumen (El rango va de 0.0 a 1.0) -->
-<script>
-  document.getElementById('birthdayVideo').volume = 0.35;
-</script>
+    <!-- Script para regular el volumen (El rango va de 0.0 a 1.0) -->
+    <script>
+        document.getElementById('birthdayVideo').volume = 0.35;
+    </script>
 
 
-<!-- =====================================================
+    <!-- =====================================================
      VOCES DE HIJOS Y NIETOS
 ===================================================== -->
-
-<section class="family-audio-section section">
-
-    <div class="container reveal">
-
-        <span class="section-number">
-            04
-        </span>
-
-        <h2 class="section-title">
-            Voces de la familia
-        </h2>
-
-        <p class="section-subtitle">
-            Un mensaje especial de tus hijos y nietos
-            para celebrar tus 70 años.
-        </p>
-
-
-        <div class="audio-card">
-
-            <div class="audio-icon">
-                ❤️
-            </div>
-
-
-            <h3>
-                Para ti, mamá
-            </h3>
-
-
-            <p>
-                Porque hay palabras que merecen
-                ser escuchadas y guardadas para siempre.
-            </p>
-
-
-            <!-- AUDIO -->
-
-            <audio
-                id="familyAudio"
-                preload="metadata"
-            >
-
-                <source
-                    src="music/mensajes-hijos-nietos.mp3"
-                    type="audio/mpeg"
-                >
-
-                Tu navegador no puede reproducir este audio.
-
-            </audio>
-
-
-            <!-- BOTÓN PRINCIPAL -->
-
-            <button
-                id="familyAudioButton"
-                class="family-audio-button"
-                type="button"
-            >
-
-                <span id="familyAudioIcon">
-                    ▶
-                </span>
-
-                <span id="familyAudioText">
-                    Escuchar mensajes
-                </span>
-
-            </button>
-
-
-            <!-- BARRA DE PROGRESO -->
-
-            <div class="audio-progress-container">
-
-                <div
-                    id="audioProgress"
-                    class="audio-progress"
-                ></div>
-
-            </div>
-
-
-            <!-- TIEMPO -->
-
-            <div class="audio-time">
-
-                <span id="audioCurrentTime">
-                    0:00
-                </span>
-
-                <span id="audioDuration">
-                    0:00
-                </span>
-
-            </div>
-
-
-            <p class="audio-message">
-                🎧 Ponte cómodo y escucha hasta el final...
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CARTA
-===================================================== -->
-
-<section class="letter-section section">
-
-    <div class="container">
-
-        <div class="letter reveal">
-
+    <section class="family-audio-section section">
+        <div class="container reveal">
             <span class="section-number">
-                05
+                04
             </span>
-
-
-            <h2>
-                Querida mamá
+            <h2 class="section-title">
+                Voces de la familia
             </h2>
-
-
-            <p>
-                Este 08 de octubre llegas a los 70 años y tenemos
-                una razón enorme para celebrar.
+            <p class="section-subtitle">
+                Un mensaje especial de tus hijos y nietos
+                para celebrar tus 70 años.
             </p>
+            <div class="audio-card">
+                <div class="audio-icon">
+                    ❤️
+                </div>
+                <h3>
+                    Para ti, mamá
+                </h3>
+                <p>
+                    Porque hay palabras que merecen
+                    ser escuchadas y guardadas para siempre.
+                </p>
+                <!-- AUDIO -->
 
+                <audio id="familyAudio" preload="metadata">
 
-            <p>
-                Gracias por cada abrazo, cada consejo,
-                cada sacrificio y cada momento compartido.
-            </p>
+                    <source src="music/mensajes-hijos-nietos.mp3" type="audio/mpeg">
 
+                    Tu navegador no puede reproducir este audio.
+                </audio>
 
-            <p>
-                Gracias por estar en los días buenos,
-                pero también por enseñarnos a seguir
-                adelante en los días difíciles.
-            </p>
+                <!-- BOTÓN PRINCIPAL -->
 
+                <button id="familyAudioButton" class="family-audio-button" type="button">
+                    <span id="familyAudioIcon">
+                        ▶
+                    </span>
+                    <span id="familyAudioText">
+                        Escuchar mensajes
+                    </span>
+                </button>
+                <!-- BARRA DE PROGRESO -->
 
-            <p>
-                Si pudiéramos regalarte algo que estuviera
-                a la altura de todo lo que significas,
-                probablemente no encontraríamos nada suficiente.
-            </p>
+                <div class="audio-progress-container">
 
-
-            <p>
-                Por eso solamente queremos decirte:
-            </p>
-
-
-            <div class="quote">
-                Te queremos muchísimo.
+                    <div id="audioProgress" class="audio-progress"></div>
+                </div>
+                <!-- TIEMPO -->
+                <div class="audio-time">
+                    <span id="audioCurrentTime">
+                        0:00
+                    </span>
+                    <span id="audioDuration">
+                        0:00
+                    </span>
+                </div>
+                <p class="audio-message">
+                    🎧 Ponte cómodo y escucha hasta el final...
+                </p>
             </div>
-
-
-            <p>
-                Deseamos que tu camino esté lleno de salud, 
-                tranquilidad, alegría y 
-                muchos momentos junto a las personas que te aman.
-            </p>
-
-
-            <div class="signature">
-                Con todo nuestro amor ❤️ Mamichela
-            </div>
-
         </div>
+    </section>
 
-    </div>
+    <!-- =====================================================
+     CARTA / INVITACIÓN DE GALA
+===================================================== -->
+    <section class="letter-section section py-5 d-flex justify-content-center align-items-center"
+        style="min-height: 100vh;">
+        <div class="container">
 
-</section>
+            <!-- Mantiene tu clase base .letter e incluye la alineación interna -->
+            <div class="letter reveal mx-auto position-relative" style="border-radius: 4px;">
+
+                <span class="section-number">
+                    05
+                </span>
+
+                <h2 class="section-title">
+                    Invitación
+                </h2>
+
+                <p class="mb-4">
+                    Hay fechas que merecen grabarse en el corazón, y llegar a los 70 años es una de las razones más
+                    grandes que tenemos para dar gracias y celebrar tu vida.
+                    Te invitamos a compartir este día tan especial con nosotros
+                </p>
+
+                <!-- BLOQUE LOGÍSTICA: Integrado con tus variables --gold y --dark -->
+                <div class="info-evento-box my-4 p-4 text-center">
+                    <div class="row g-3 justify-content-center">
+                        <div class="col-sm-4">
+                            <div class="info-item">
+                                <span class="info-label">Misa de acción de gracias</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 border-center-custom">
+                            <div class="info-item">
+                                <span class="info-label">Fecha</span>
+                                <span class="info-val">08 de Octubre</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 border-center-custom">
+                            <div class="info-item">
+                                <span class="info-label">Hora</span>
+                                <span class="info-val">02:00 pm</span>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 border-center-custom">
+                            <div class="info-item">
+                                <span class="info-label">Lugar</span>
+                                <span class="info-val">Iglesia San Pedro - Cangallo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-3 pt-3 border-top" style="border-color: rgba(198, 161, 91, 0.2) !important;">
+                        <p class="m-0" style="font-size: 0.95rem; font-style: italic;">
+                            Luego de la misa, acompáñanos a compartir una recepción en el Local Grass "La Victoria" -
+                            Cangallo.
+                            Disfrutaremos de un gran momento junto a artistas invitados: "Norma y La Mensajera del Perú" y "Los Maqmas" </p>
+                    </div>
+                </div>
+
+                <div class="highlight">
+                    Con todo nuestro amor ❤️ a nuestra Mamichela
+                </div>
+                <div class="signature">
+                    Tu familia
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
-<!-- =====================================================
+    <!-- =====================================================
      FINAL
 ===================================================== -->
-
-<section class="final-section">
-
-    <div class="final-overlay"></div>
-
-
-    <div class="final-content reveal">
-
-        <p>
-            ESTE 08 DE OCTUBRE CELEBRAMOS
-        </p>
-
-
-        <h2>
-            70
-        </h2>
-
-
-        <h3>
-            años de una vida maravillosa
-        </h3>
-
-
-        <div class="heart">
-            ❤️
+    <section class="final-section">
+        <div class="final-overlay"></div>
+        <div class="final-content reveal">
+            <p>
+                ESTE 08 DE OCTUBRE CELEBRAMOS
+            </p>
+            <h2>70</h2>
+            <h3>
+                años de una vida maravillosa
+            </h3>
+            <div class="heart">
+                ❤️
+            </div>
+            <p class="final-message">
+                Feliz cumpleaños, mamá.
+            </p>
+            <p class="small-final">
+                Victoria Chauca Vda. de Cárdenas
+            </p>
+            <p class="small-final">
+                Que los próximos años estén llenos
+                de nuevos recuerdos.
+            </p>
         </div>
+    </section>
 
-
-        <p class="final-message">
-            Feliz cumpleaños, mamá.
-        </p>
-
-
-        <p class="small-final">
-            Victoria Chauca Vda. de Cárdenas
-        </p>
-
-
-        <p class="small-final">
-            Que los próximos años estén llenos
-            de nuevos recuerdos.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================================
+    <!-- =====================================================
      BOTÓN MÚSICA
 ===================================================== -->
 
-<button
-    id="musicButton"
-    class="music-button"
-    aria-label="Controlar música"
->
-    ♪
-</button>
+    <button id="musicButton" class="music-button" aria-label="Controlar música">
+        ♪
+    </button>
 
 
-<audio
-    id="backgroundMusic"
-    loop
->
+    <audio id="backgroundMusic" loop>
 
-    <source
-        src="music/musica.mp3"
-        type="audio/mpeg"
-    >
+        <source src="music/musica.mp3" type="audio/mpeg">
 
-</audio>
+    </audio>
 
-<!-- =====================================================
+    <!-- =====================================================
      CONFETI
 ===================================================== -->
-
-<canvas
-    id="confetti"
-></canvas>
-
-
-
-<script
-    src="js/app.js"
-></script>
-
-
+    <canvas id="confetti"></canvas>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
